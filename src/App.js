@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     let c = 0;
     data.map(r => {
-      if (JSON.stringify(r).includes(searchstring)) c++;
+      if (JSON.stringify(r["title"]+r["language"]+r["year"]+r["author"]).includes(searchstring)) c++;
     })
   
     setFiltereddata(c);

@@ -8,7 +8,6 @@ export const Button = ({ pagenumbercallback, totalpage, pagenumber, filtereddata
                 <li class="page-item"><a class="page-link" href="#" onClick={() => pagenumbercallback(true)}>Next</a></li>
                 <li class="page-item"><a class="page-link">{pagenumber + 1 + " / " + Math.ceil((filtereddata) / 10)}</a></li>
                 <li class="page-item"><a class="page-link">{"Total "+ (filtereddata) + " books found"}</a></li>
-
             </ul>
         </nav>
     )

@@ -26,7 +26,7 @@ function Table({ data, searchstring, pagenumber}) {
 
                 <tbody id="tableBody">
                     {temp.filter((r, i) => {
-                        if(JSON.stringify(r).includes(searchstring)) return r; 
+                        if(JSON.stringify(r["title"]+r["language"]+r["year"]+r["author"]).includes(searchstring)) return r; 
                     }).filter((r, i) => {
                         if(i>=pagenumber*10 && i<10*(pagenumber+1)) return r; 
                     }).map((res, i) => {

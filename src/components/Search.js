@@ -6,7 +6,7 @@ function Search({ callback }) {
             <div class="form-group row">
                 <label for="bookName" class="col-sm-2 col-form-label">Search</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="bookName" onChange={(e) => callback(e.target.value)}/>
+                    <input type="text" class="form-control" placeholder="Search..." id="bookName" onChange={(e) => callback(e.target.value)}/>
                 </div>
             </div>
         </form>

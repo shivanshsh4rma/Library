@@ -1,4 +1,4 @@
-function Table({ data, searchstring }) {
+function Table({ data, searchstring, pagenumber}) {
     return (
         <div class="table">
             <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
@@ -13,8 +13,10 @@ function Table({ data, searchstring }) {
                 </thead>
 
                 <tbody id="tableBody">
-                    {data.filter((r) => {
+                    {data.filter((r, i) => {
                         if(JSON.stringify(r).includes(searchstring)) return r; 
+                    }).filter((r, i) => {
+                        if(i>=pagenumber*10 && i<10*(pagenumber+1)) return r; 
                     }).map((res, i) => {
                         return (<tr>
                             <th scope="col">{res.title}</th>

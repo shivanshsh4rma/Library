@@ -2,8 +2,6 @@
 function Search({ callback }) {
   return (
     <>
-     <h2>Search Your Books here</h2>
-        <hr />
         <form id="libraryForm">
             <div class="form-group row">
                 <label for="bookName" class="col-sm-2 col-form-label">Search</label>

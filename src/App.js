@@ -17,7 +17,7 @@ function App() {
     data.map(r => {
       if (JSON.stringify(r).includes(searchstring)) c++;
     })
-    console.log(c);
+  
     setFiltereddata(c);
     return () => {
     }
